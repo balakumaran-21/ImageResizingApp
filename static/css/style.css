@@ -1,0 +1,91 @@
+#thumbnailContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            border: 2px solid #e2e8f0;
+            padding: 5px;
+            border-radius: 0.25rem;
+            max-width: 400px;
+            max-height: 400px;
+            width: 500px;
+            height: 350px;
+            overflow-x: auto;
+        }
+        #fileInputLabel:hover {
+    opacity: 0.7;
+}
+
+        .thumbnail {
+            max-width: 100px;
+            max-height: 100px;
+            object-fit: cover;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .thumbnail-container {
+            position: relative;
+        }
+
+        .remove-thumbnail {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2px 5px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .file-input-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        #fileInputLabel {
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 0.25rem;
+        }
+
+        .snackbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 16px;
+            border-radius: 8px;
+            z-index: 9999;
+            display: none;
+            animation: slide 3s;
+        }
+
+        .snackbar.error {
+            background-color: #d32f2f; /* Red color for error */
+            color: white;
+        }
+
+        .snackbar.loading {
+            background-color: #0288d1; /* Blue color for loading */
+        }
+
+        .snackbar.success {
+            background-color: #388e3c; /* Green color for success */
+        }
+
+        @keyframes slide {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
